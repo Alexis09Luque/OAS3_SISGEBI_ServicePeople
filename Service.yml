@@ -16,7 +16,7 @@ tags:
     description: Everything about applicant
         
 paths:
-  #Modulo de Escuela
+  #Modulo de Employees
   /employees:
     get:
       tags:
