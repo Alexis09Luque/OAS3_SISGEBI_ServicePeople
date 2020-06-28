@@ -14,18 +14,42 @@
     page:
       name: page
       in: query
-      required: true
+      required: false
       description: The number of page
       schema:
         type: integer 
         
-    amount:
-      name: page
+    limit:
+      name: limit
       in: query
-      required: true
-      description: The numbers of items to return for page
+      required: false
+      description: The numbers of items max to return for page
       schema:
         type: integer 
+
+    dni:
+      name: dni
+      in: query
+      required: false
+      description: Document to identify to person
+      schema:
+        type: integer 
+
+    name:
+      name: name
+      in: query
+      required: false
+      description: Name of person
+      schema:
+        type: string
+
+    surname:
+      name: surname
+      in: query
+      required: false
+      description: Surname of person
+      schema:
+        type: string
 
    
     

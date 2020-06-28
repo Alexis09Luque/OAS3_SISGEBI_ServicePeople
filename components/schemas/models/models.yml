@@ -1,7 +1,7 @@
  # SCHEMA MODEL
   # Este tipo de esquema representa a la entidad del modelo en nuestra aplicación
-  # Por ejemplo en el servicio: ServicePeople, tenemos 2 modelos 
-    # Employee: Es el esquema del modelo Employee, el cual contiene sus atributos y un ejemplo  
+  # Por ejemplo en el servicio: ServicePeople tenemos 2 modelos 
+    # Employee: Es el esquema del modelo Employee el cual contiene sus atributos y un ejemplo  
     Employee:
       type: object
       properties:
@@ -50,6 +50,222 @@
         photo: "photo.jpg"
         created_at: "2020-04-16 07:35:08"
         updated_at: "2020-04-16 07:35:08"
+
+    # EmployeePerPage: Es el esquema del modelo que retorna una consulta por paginación el cual contiene sus atributos y un ejemplo  
+    EmployeesPerPage:
+      type: object
+      properties:
+        total: 
+          type: integer
+        per_page:
+          type: integer
+        current_page:
+          type: integer 
+        last_page: 
+          type: integer
+        first_page_url: 
+          type: string
+        last_page_url: 
+          type: string
+        next_page_url: 
+          type: string
+        prev_page_url: 
+          type: string
+        path: 
+          type: string
+        from: 
+          type: integer 
+        to: 
+          type: integer 
+        data:
+          type: array
+          properties:
+            - id:
+              type: integer 
+              dni:
+                type: string          
+              code:
+                type: string
+              names:
+                type: string         
+              surname:
+                type: string
+              profile_id:
+                type: integer
+              date_of_birth:
+                type: string          
+              gender:
+                type: string
+              phone:
+                type: string 
+              mobile:
+                type: string       
+              address:
+                type: string
+              email:
+                type: string 
+              photo:
+                type: string        
+              created_at: 
+                type: string       
+              updated_at:
+                type: string
+
+      example:
+        total: 45
+        per_page: 10
+        current_page: 1
+        last_page: 5
+        first_page_url: "http://laravel.app?page=1"
+        last_page_url: "http://laravel.app?page=4"
+        next_page_url: "http://laravel.app?page=2"
+        prev_page_url: null
+        path: "http://laravel.app"
+        from: 1
+        to: 10
+        data:  
+          - id: 1
+            dni: "72959687"       
+            code: "16200378"
+            names: "Josue Enrique"        
+            surname: "Torres Suarez"
+            profile_id: 1
+            date_of_birth: "1990-04-16"       
+            gender: "M"
+            phone: "930753951"      
+            address: "Jr. Union Block A 234"
+            email: "torressuarezivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 2
+            dni: "72839683"       
+            code: "16301389"
+            names: "Luis Enrique"        
+            surname: "Suarez Torres"
+            profile_id: 1
+            date_of_birth: "1990-04-16"       
+            gender: "M"
+            phone: "976593497"      
+            address: "Jr. Union Block A 234"
+            email: "suareztorresivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"  
+          - id: 3
+            dni: "72959687"       
+            code: "16200378"
+            names: "JMiguel Kevin"        
+            surname: "Valdivia Suarez"
+            profile_id: 2
+            date_of_birth: "1990-04-16"       
+            gender: "M"
+            phone: "930753951"      
+            address: "Jr. Union Block A 234"
+            email: "torressuarezivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 4
+            dni: "72839683"       
+            code: "16301389"
+            names: "Elisa Sofia"        
+            surname: "Suarez Torres"
+            profile_id: 2
+            date_of_birth: "1990-04-16"       
+            gender: "M"
+            phone: "976593497"      
+            address: "Jr. Union Block A 234"
+            email: "suareztorresivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 5
+            dni: "72959687"       
+            code: "16200378"
+            names: "Alicia Josefina"        
+            surname: "Barbarán Espinoza"
+            profile_id: 1
+            date_of_birth: "1990-04-16"       
+            gender: "F"
+            phone: "930753951"      
+            address: "Jr. Union Block A 234"
+            email: "torressuarezivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 6
+            dni: "72839683"       
+            code: "16301389"
+            names: "Yanira Alexandra"        
+            surname: "Suarez Mendoza"
+            profile_id: 1
+            date_of_birth: "1990-04-16"       
+            gender: "F"
+            phone: "976593497"      
+            address: "Jr. Union Block A 234"
+            email: "suareztorresivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"  
+          - id: 7
+            dni: "72959687"       
+            code: "16200378"
+            names: "Donatello Renato"        
+            surname: "Lopez Prado"
+            profile_id: 2
+            date_of_birth: "1990-04-16"       
+            gender: "M"
+            phone: "930753951"      
+            address: "Jr. Union Block A 234"
+            email: "torressuarezivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 8
+            dni: "72839683"       
+            code: "16301389"
+            names: "Hila Margarita"        
+            surname: "Torres del Aguila"
+            profile_id: 2
+            date_of_birth: "1990-04-16"       
+            gender: "M"
+            phone: "976593497"      
+            address: "Jr. Union Block A 234"
+            email: "suareztorresivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 9
+            dni: "72959687"       
+            code: "16200378"
+            names: "Luis Fernando"        
+            surname: "Jose Maria"
+            profile_id: 2
+            date_of_birth: "1990-04-16"       
+            gender: "M"
+            phone: "930753951"      
+            address: "Jr. Union Block A 234"
+            email: "torressuarezivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 10
+            dni: "72839683"       
+            code: "16301389"
+            names: "Alex Enrique"        
+            surname: "Aguilar Prado"
+            profile_id: 2
+            date_of_birth: "1990-04-16"       
+            gender: "M"
+            phone: "976593497"      
+            address: "Jr. Union Block A 234"
+            email: "suareztorresivan@hotmail.com"
+            photo: "photo.jpg"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+
+
     # Applicant: Es el esquema del modelo Applicant, el cual contiene sus atributos y un ejemplo 
     Applicant:
       type: object
@@ -99,13 +315,261 @@
         photo: "photo.jpg"
         code: "16200357"
         school_id: 4
-        phone: "5893640"
+        phone: "4875163"
         mobile: "930459761" 
         personal_email: "montesjimenez@gmail.com"    
         address: "Jr. Los Olivos Block Z 234"
         description: "El alumno se encuentra con Beca 18"
         created_at: "2020-04-16 07:35:08"
         updated_at: "2020-04-16 07:35:08"
+
+  # ApplicantsPerPage: Es el esquema del modelo que retorna una consulta por paginación el cual contiene sus atributos y un ejemplo  
+    ApplicantsPerPage:
+      type: object
+      properties:
+        total: 
+          type: integer
+        per_page:
+          type: integer
+        current_page:
+          type: integer 
+        last_page: 
+          type: integer
+        first_page_url: 
+          type: string
+        last_page_url: 
+          type: string
+        next_page_url: 
+          type: string
+        prev_page_url: 
+          type: string
+        path: 
+          type: string
+        from: 
+          type: integer 
+        to: 
+          type: integer 
+        data:
+          type: array
+          properties:
+              - id:
+                  type: integer 
+                dni:
+                  type: string
+                names:
+                  type: string         
+                surname:
+                  type: string
+                type:
+                  type: string
+                gender:
+                  type: string
+                institutional_email:
+                  type: string
+                photo:
+                  type: string 
+                code:
+                  type: string  
+                school_id :
+                  type: integer     
+                phone:
+                  type: string    
+                mobile:
+                  type: string 
+                personal_email:
+                  type: string   
+                address:
+                  type: string
+                description:
+                  type: string         
+                created_at: 
+                  type: string       
+                updated_at:
+                  type: string
+
+      example:
+        total: 45
+        per_page: 10
+        current_page: 1
+        last_page: 5
+        first_page_url: "http://laravel.app?page=1"
+        last_page_url: "http://laravel.app?page=4"
+        next_page_url: "http://laravel.app?page=2"
+        prev_page_url: null
+        path: "http://laravel.app"
+        from: 1
+        to: 10
+        data:  
+          - id: 1
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 2
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 3
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 4
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 5
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 6
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08" 
+          - id: 7
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 8
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 9
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
+          - id: 10
+            dni: "72959687"
+            names: "Ivana Vanesa"        
+            surname: "Montes Jimenez"
+            type: "Posgrado"
+            gender: "F"
+            institutional_email: "ivanamontes@unmsm.edu.pe"
+            photo: "photo.jpg"
+            code: "16200357"
+            school_id: 4
+            phone: "4875163"
+            mobile: "930459761" 
+            personal_email: "montesjimenez@gmail.com"    
+            address: "Jr. Los Olivos Block Z 234"
+            description: "El alumno se encuentra con Beca 18"
+            created_at: "2020-04-16 07:35:08"
+            updated_at: "2020-04-16 07:35:08"
 
 
     

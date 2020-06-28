@@ -48,18 +48,27 @@
       content:
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
+            $ref: ../schemas/responses/successful.yml#/ShowEmployeesResponse                                                   
           example: 
             $ref: ../../examples/Employees.json
 
     ShowEmployeesPerPage: 
-      description: Show certain amount of Employees per page
+      description: Show certain amount of Employees per page 
       content:
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
+            $ref: ../schemas/responses/successful.yml#/ShowEmployeesPerPageResponse                                                   
           example: 
-            $ref: ../../examples/Employees.json
+            $ref: ../../examples/EmployeesPerPage.json
+
+    SearchEmployeesPerPage: 
+      description: Show certain amount of Employees searched for field dni,name or surname per page 
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowEmployeesPerPageResponse                                                   
+          example: 
+            $ref: ../../examples/EmployeesPerPage.json
     
     ShowEmployee:
       description: Show one Employee 
@@ -81,7 +90,8 @@
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/CreatedApplicantResponse                        
+            $ref: ../schemas/responses/successful.yml#/CreatedApplicantResponse  
+                          
     
     ShowApplicants: 
       description: Show all Applicants
@@ -91,6 +101,24 @@
             $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
           example: 
             $ref: ../../examples/Applicants.json
+
+    ShowApplicantsPerPage: 
+      description: Show certain amount of Applicants per page 
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowApplicantsPerPageResponse                                                   
+          example: 
+            $ref: ../../examples/ApplicantsPerPage.json
+
+    SearchApplicantsPerPage: 
+      description: Show certain amount of Applicants searched for field dni,name or surname per page 
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowApplicantsPerPageResponse                                                   
+          example: 
+            $ref: ../../examples/ApplicantsPerPage.json
     
     ShowApplicant:
       description: Show one Applicant 

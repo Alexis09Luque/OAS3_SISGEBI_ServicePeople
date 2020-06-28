@@ -64,6 +64,22 @@
           type: string
           example: S002
 
+    ShowEmployeesPerPageResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties: 
+        data:
+          $ref: ../models/models.yml#/EmployeesPerPage
+        code:
+          type: integer
+          example: 200
+        type:
+          type: string
+          example: S002
+
       
       # CreatedResponse para Applicant: Esquema de la respuesta de exito CreatedResponse el cual contiene un ejemplo
     CreatedApplicantResponse:
@@ -105,6 +121,22 @@
       properties: 
         data:
           $ref: ../models/models.yml#/Applicant
+        code:
+          type: integer
+          example: 200
+        type:
+          type: string
+          example: S002
+
+    ShowApplicantsPerPageResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties: 
+        data:
+          $ref: ../models/models.yml#/ApplicantsPerPage
         code:
           type: integer
           example: 200

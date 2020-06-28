@@ -116,7 +116,7 @@ paths:
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated 
 
-  /employees/search?page&?amount:
+  /employees/pagination:
     get:
       tags:
         - Employee
@@ -124,10 +124,33 @@ paths:
       operationId: pagEmployee
       parameters:
         - $ref: components/parameters/parameters.yml#/page
-        - $ref: components/parameters/parameters.yml#/amount
+        - $ref: components/parameters/parameters.yml#/limit
       responses:
         '200':
           $ref: components/responses/responses.yml#/ShowEmployeesPerPage      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+
+
+  /employees/search:
+    get:
+      tags:
+        - Employee
+      summary: Search of employees for certain parameter
+      operationId: searchEmployee
+      parameters:
+        - $ref: components/parameters/parameters.yml#/page
+        - $ref: components/parameters/parameters.yml#/limit
+        - $ref: components/parameters/parameters.yml#/dni
+        - $ref: components/parameters/parameters.yml#/name
+        - $ref: components/parameters/parameters.yml#/surname
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/SearchEmployeesPerPage      
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -236,6 +259,50 @@ paths:
           $ref: components/responses/responses.yml#/Unauthenticated 
         '422':
           $ref: components/responses/responses.yml#/UnprocessableEntity 
+
+  /applicants/pagination:
+    get:
+      tags:
+        - Applicant
+      summary: Recover a certain number of applicants per page
+      operationId: pagApplicant
+      parameters:
+        - $ref: components/parameters/parameters.yml#/page
+        - $ref: components/parameters/parameters.yml#/limit
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowApplicantsPerPage      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+
+
+  /applicants/search:
+    get:
+      tags:
+        - Applicant
+      summary: Search of applicants for certain parameter
+      operationId: searchApplicant
+      parameters:
+        - $ref: components/parameters/parameters.yml#/page
+        - $ref: components/parameters/parameters.yml#/limit
+        - $ref: components/parameters/parameters.yml#/dni
+        - $ref: components/parameters/parameters.yml#/name
+        - $ref: components/parameters/parameters.yml#/surname
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/SearchApplicantsPerPage      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+        
+          
 
 # Aplicar la API key globalmente a todas las operaciones 
 security:
