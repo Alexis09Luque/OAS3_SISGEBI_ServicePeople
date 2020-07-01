@@ -310,7 +310,6 @@ security:
             
 
 components:
-#git commit -m "fix(Service.yml) : Change content to multipart/formData" -m "Se realizo el cambio en los métodos que sean solicitudes de actualización y de creación , el contet type a  multipart/formData"      
   # SECURITY
   # Contiene todos los tipos de seguridad para el uso del servicio  
   securitySchemes:
