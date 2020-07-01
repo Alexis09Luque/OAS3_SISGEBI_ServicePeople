@@ -82,7 +82,7 @@
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowEmployeeResponse 
+            $ref: ../schemas/responses/successful.yml#/ShowDeleteEmployeeResponse 
 
     ## Respuestas de exito específicas para Solicitantes
     CreatedApplicant:
@@ -132,6 +132,6 @@
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowApplicantResponse
+            $ref: ../schemas/responses/successful.yml#/ShowDeleteApplicantResponse
                                                                                
     

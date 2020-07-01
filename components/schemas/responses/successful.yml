@@ -31,7 +31,23 @@
         type:
           type: string
           example: S004  
-          
+
+    ShowDeleteEmployeeResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties: 
+        data:
+          $ref: ../models/models.yml#/EmployeeDeleted
+        code:
+          type: integer
+          example: 200
+        type:
+          type: string
+          example: S003      
+    
     ShowEmployeeResponse:
       type: object
       required:
@@ -97,6 +113,22 @@
         type:
           type: string
           example: S004 
+    
+    ShowDeleteApplicantResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties: 
+        data:
+          $ref: ../models/models.yml#/ApplicantDeleted
+        code:
+          type: integer
+          example: 200
+        type:
+          type: string
+          example: S003
           
     ShowApplicantResponse:
       type: object

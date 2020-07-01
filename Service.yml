@@ -42,7 +42,7 @@ paths:
       requestBody:
         description: Employee to add to the system
         content:
-          application/json:
+          multipart/formData:
             schema:
               $ref: components/schemas/payloads/payload.yml#/EmployeePayload
       responses:      
@@ -84,13 +84,13 @@ paths:
       requestBody:
         description: Employee to update to the system
         content:
-          x-www-form-urlencoded:
+          multipart/form-data:
             schema:
               $ref: components/schemas/payloads/payload.yml#/EmployeePayload
       responses:
         '201':
           $ref: components/responses/responses.yml#/CreatedEmployee     
-        '404':          
+        '404':           
           $ref: components/responses/responses.yml#/NotFound 
         '405':
           $ref: components/responses/responses.yml#/MethodNotAllowed           
@@ -184,7 +184,7 @@ paths:
       requestBody:
         description: Applicant to add to the system
         content:
-          application/json:
+          multipart/formData:
             schema:
               $ref: components/schemas/payloads/payload.yml#/ApplicantPayload
       responses:      
@@ -226,7 +226,7 @@ paths:
       requestBody:
         description: Applicant to update to the system
         content:
-          x-www-form-urlencoded:
+          multipart/formData:
             schema:
               $ref: components/schemas/payloads/payload.yml#/ApplicantPayload
       responses:
@@ -310,7 +310,7 @@ security:
             
 
 components:
-      
+#git commit -m "fix(Service.yml) : Change content to multipart/formData" -m "Se realizo el cambio en los métodos que sean solicitudes de actualización y de creación , el contet type a  multipart/formData"      
   # SECURITY
   # Contiene todos los tipos de seguridad para el uso del servicio  
   securitySchemes:
