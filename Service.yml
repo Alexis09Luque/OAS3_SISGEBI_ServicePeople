@@ -145,9 +145,7 @@ paths:
       parameters:
         - $ref: components/parameters/parameters.yml#/page
         - $ref: components/parameters/parameters.yml#/limit
-        - $ref: components/parameters/parameters.yml#/dni
-        - $ref: components/parameters/parameters.yml#/name
-        - $ref: components/parameters/parameters.yml#/surname
+        - $ref: components/parameters/parameters.yml#/quest
       responses:
         '200':
           $ref: components/responses/responses.yml#/SearchEmployeesPerPage      
@@ -289,9 +287,7 @@ paths:
       parameters:
         - $ref: components/parameters/parameters.yml#/page
         - $ref: components/parameters/parameters.yml#/limit
-        - $ref: components/parameters/parameters.yml#/dni
-        - $ref: components/parameters/parameters.yml#/name
-        - $ref: components/parameters/parameters.yml#/surname
+        - $ref: components/parameters/parameters.yml#/quest
       responses:
         '200':
           $ref: components/responses/responses.yml#/SearchApplicantsPerPage      

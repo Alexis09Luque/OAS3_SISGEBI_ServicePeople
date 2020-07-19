@@ -27,29 +27,13 @@
       schema:
         type: integer 
 
-    dni:
-      name: dni
+    quest:
+      name: quest
       in: query
       required: false
-      description: Document to identify to person
+      description: Query to search
       schema:
-        type: integer 
-
-    name:
-      name: name
-      in: query
-      required: false
-      description: Name of person
-      schema:
-        type: string
-
-    surname:
-      name: surname
-      in: query
-      required: false
-      description: Surname of person
-      schema:
-        type: string
+        type: string 
 
    
     
